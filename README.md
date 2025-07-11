@@ -1,2 +1,2 @@
-# HMS
-Front End Development for HMS
+# hms
+Front End Development for hms
