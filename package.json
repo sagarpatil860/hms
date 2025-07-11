@@ -1,0 +1,20 @@
+{
+  "name": "hms",
+  "version": "1.0.0",
+  "description": "'Frontend code base for hms'",
+  "homepage": "https://github.com/sagarpatil860/hms#readme",
+  "bugs": {
+    "url": "https://github.com/sagarpatil860/hms/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagarpatil860/hms.git"
+  },
+  "license": "UNLICENSED",
+  "author": "sagarpatil860@gmail.com",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  }
+}
