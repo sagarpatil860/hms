@@ -121,10 +121,11 @@ export default tseslint.config(
       react: {
         version: "detect", // Automatically detect the React version from package.json
       },
-      // 'import/resolver': { // Uncomment if using eslint-plugin-import
-      //   typescript: true,
-      //   node: true,
-      // },
+      "import/resolver": {
+        // Uncomment if using eslint-plugin-import
+        typescript: true,
+        node: true,
+      },
     },
   },
 
@@ -176,6 +177,8 @@ export default tseslint.config(
       "webpack.common.js",
       "webpack.dev.js",
       "webpack.prod.js",
+      "jest.config.cjs",
+      "jest.setup.ts",
     ],
   },
 

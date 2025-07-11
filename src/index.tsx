@@ -4,6 +4,7 @@ import "./index.css";
 import ReactDOM from "react-dom/client"; // Import createRoot from react-dom/client for React 18+
 
 import png from "./abcd.png";
+import App from "./App";
 import home from "./home.svg";
 
 // Get the DOM element where your React app will be mounted.
@@ -29,6 +30,7 @@ root.render(
       <img src={png} alt="hgjh" />
       <img src={home} alt="hjhgfhg" />
       <p>Sagar Patil</p>
+      <App />
     </>
   </React.StrictMode>,
 );
