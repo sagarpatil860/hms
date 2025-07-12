@@ -8,6 +8,8 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 // If you plan to add jsx-a11y or import plugins later:
 import eslintPluginJsxA11y from "eslint-plugin-jsx-a11y";
 import eslintPluginImport from "eslint-plugin-import";
+import noInlineStylePlugin from "eslint-plugin-no-inline-styles";
+import jsdocPlugin from "eslint-plugin-jsdoc";
 
 export default tseslint.config(
   // 1. Core ESLint Recommended Rules
@@ -26,6 +28,8 @@ export default tseslint.config(
       "react-hooks": eslintPluginReactHooks,
       "jsx-a11y": eslintPluginJsxA11y, // Uncomment if using jsx-a11y plugin
       import: eslintPluginImport, // Uncomment if using import plugin
+      "no-inline-styles": noInlineStylePlugin, // eslint-plugin-no-inline-styles
+      jsdoc: jsdocPlugin,
     },
     extends: [
       // Extends recommended configurations from the React plugins
@@ -100,7 +104,7 @@ export default tseslint.config(
       "no-alert": "error",
 
       // 🚫 Disallow inline styles in JSX
-      // "no-inline-styles/no-inline-styles": "error",
+      "no-inline-styles/no-inline-styles": "error",
 
       // 🚫 Enforce function declarations for React components
       "react/function-component-definition": [
@@ -110,7 +114,14 @@ export default tseslint.config(
           unnamedComponents: "function-expression",
         },
       ],
-
+      // 🚫 Disallow Disallows multiple import statements from the same module.
+      "no-duplicate-imports": [
+        "error",
+        {
+          includeExports: true,
+          allowSeparateTypeImports: false,
+        },
+      ],
       // 🚫 Disallow use of `any` type
       "@typescript-eslint/no-explicit-any": "error",
 
@@ -125,7 +136,15 @@ export default tseslint.config(
 
       // 🚫 Disallow reassignment of function parameters
       "no-param-reassign": "error",
-
+      // 🚫 To enforce a maximum of 500 lines per file
+      "max-lines": [
+        "error",
+        {
+          max: 400,
+          skipBlankLines: true,
+          skipComments: true,
+        },
+      ],
       // Other import-related rules you might find useful:
       "import/no-unresolved": "error", // Ensure imports point to a file/module that can be resolved.
       "import/named": "error", // Ensure named imports correspond to a named export.
@@ -149,6 +168,34 @@ export default tseslint.config(
         "error",
         { prefer: "type-imports" },
       ], // Enforce type-only imports for types
+
+      // JS-Docs rules
+      // Require JSDoc comments on specific types of code
+      "jsdoc/require-jsdoc": [
+        "error",
+        {
+          publicOnly: true,
+          contexts: [
+            "FunctionDeclaration",
+            "ClassDeclaration",
+            "MethodDefinition",
+            "ClassProperty",
+            "ArrowFunctionExpression",
+          ],
+        },
+      ],
+
+      // Require descriptions, param/return tags, and type annotations
+      "jsdoc/require-description": "error",
+      "jsdoc/require-param": "error",
+      "jsdoc/require-param-type": "error",
+      "jsdoc/require-returns": "error",
+      "jsdoc/require-returns-type": "error",
+
+      // Validate tag names and types
+      "jsdoc/check-tag-names": "error",
+      "jsdoc/check-types": "error",
+      "jsdoc/valid-types": "error",
     },
     settings: {
       react: {
