@@ -20,7 +20,7 @@ if (!rootElement) {
 // Create a React root using the new createRoot API from React 18+.
 // The 'as HTMLElement' is a TypeScript type assertion to assure TypeScript that rootElement is indeed an HTMLElement.
 const root = ReactDOM.createRoot(rootElement);
-const def = 12345;
+const pqr = 12345;
 // Render your main App component into the React root.
 // React.StrictMode is a tool for highlighting potential problems in an application.
 // It activates additional checks and warnings for its descendants.
@@ -34,4 +34,4 @@ root.render(
     </>
   </React.StrictMode>,
 );
-console.log(def);
+console.log(pqr);
