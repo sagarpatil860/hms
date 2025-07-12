@@ -93,6 +93,39 @@ export default tseslint.config(
         { blankLine: "always", prev: ["block", "block-like"], next: "*" }, // Enforce newline AFTER a block (e.g., function, class, if/else block)
         { blankLine: "always", prev: "*", next: ["block", "block-like"] },
       ],
+      // 🚫 Disallow console logs
+      "no-console": "error",
+
+      // 🚫 Disallow alert, confirm, prompt
+      "no-alert": "error",
+
+      // 🚫 Disallow inline styles in JSX
+      // "no-inline-styles/no-inline-styles": "error",
+
+      // 🚫 Enforce function declarations for React components
+      "react/function-component-definition": [
+        "error",
+        {
+          namedComponents: "function-declaration",
+          unnamedComponents: "function-expression",
+        },
+      ],
+
+      // 🚫 Disallow use of `any` type
+      "@typescript-eslint/no-explicit-any": "error",
+
+      // 🚫 Disallow nested ternaries
+      "no-nested-ternary": "error",
+
+      // 🚫 Disallow use of `eval()`
+      "no-eval": "error",
+
+      // 🚫 Disallow debugger statements
+      "no-debugger": "error",
+
+      // 🚫 Disallow reassignment of function parameters
+      "no-param-reassign": "error",
+
       // Other import-related rules you might find useful:
       "import/no-unresolved": "error", // Ensure imports point to a file/module that can be resolved.
       "import/named": "error", // Ensure named imports correspond to a named export.
