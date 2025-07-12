@@ -23,7 +23,7 @@
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": [
-      "eslint --quiet --fix"
+      "eslint --quiet --fix --max-warnings=0"
     ]
   },
   "dependencies": {
