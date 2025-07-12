@@ -18,12 +18,14 @@
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepare": "husky"
   },
   "lint-staged": {
-  "**/*.{ts,tsx,js,jsx}": [
-    "eslint --quiet --fix"]
-},
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --quiet --fix"
+    ]
+  },
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
