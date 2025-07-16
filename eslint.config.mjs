@@ -149,7 +149,7 @@ export default tseslint.config(
       "import/no-unresolved": "error", // Ensure imports point to a file/module that can be resolved.
       "import/named": "error", // Ensure named imports correspond to a named export.
       "import/no-cycle": "error", // Forbid a module from importing a module with a dependency path back to itself.
-      "import/no-relative-parent-imports": "warn", // Forbid importing modules from parent directories. (You might want this as 'error' or adjust based on aliases)
+      // "import/no-relative-parent-imports": "warn", // Forbid importing modules from parent directories. (You might want this as 'error' or adjust based on aliases)
       "import/no-duplicates": "error", // Forbid repeated import of the same module.
       "import/first": "error", // Ensure all imports appear before other statements.
       "import/newline-after-import": "error", // Ensure there's a newline after the last import statement.

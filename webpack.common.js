@@ -19,6 +19,15 @@ module.exports = {
   resolve: {
     // These extensions will be resolved automatically when importing modules without specifying the extension.
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".css"], // Example: Include common file types
+    alias: {
+      "@api": path.resolve(__dirname, "src/api"),
+      "@auth": path.resolve(__dirname, "src/auth"),
+      "@components": path.resolve(__dirname, "src/components"),
+      "@routing": path.resolve(__dirname, "src/routing"),
+      "@pages": path.resolve(__dirname, "src/pages"),
+      "@constants": path.resolve(__dirname, "src/constants"),
+      "@shared-types": path.resolve(__dirname, "src/shared-types"),
+    },
   },
 
   // Defines rules for processing different types of modules (files).
