@@ -40,7 +40,6 @@ function AuthContextConsumer() {
         onClick={() => {
           // Handle default login stub
           const result = login({ userName: "demo", password: "demo" });
-          expect(result).toBe(undefined);
           expect(result).toBeInstanceOf(Promise); // Verify it's a Promise
         }}
       >
@@ -65,6 +64,7 @@ describe("Tests Auth provider context and component", () => {
     await userEvent.click(screen.getByTestId("login-button"));
     expect(screen.getByTestId("auth-status").textContent).toBe("Logged In");
   });
+
   it("should expose default context props", async () => {
     render(<AuthContextConsumer />);
 
