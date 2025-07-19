@@ -2,10 +2,27 @@ import React from "react"; // Not strictly needed with "jsx": "react-jsx" but go
 
 import "./index.css";
 import ReactDOM from "react-dom/client"; // Import createRoot from react-dom/client for React 18+
+/**
+//import { TransportRegistry } from "@api/core/TransportRegistry";
+//import { AxiosTransport } from "@api/transport/AxiosTransport";
+// import { GraphQLTransport } from "@api/transport/GraphQLTransport";
+ */
 
-import png from "./abcd.png";
 import App from "./App";
-import home from "./home.svg";
+/** 
+//TransportRegistry.setDefault(new AxiosTransport(), "https://api.default.com");
+
+// TransportRegistry.register(
+//   "auth",
+//   new AxiosTransport(),
+//   "https://api.auth.com",
+// );
+// TransportRegistry.register(
+//   "graphql",
+//   new GraphQLTransport(),
+//   "https://graphql.server.com/graphql",
+// );
+*/
 
 // Get the DOM element where your React app will be mounted.
 // It's typically a div with the id 'root' in your public/index.html.
@@ -26,11 +43,6 @@ const root = ReactDOM.createRoot(rootElement);
 // It activates additional checks and warnings for its descendants.
 root.render(
   <React.StrictMode>
-    <>
-      <img src={png} alt="hgjh" />
-      <img src={home} alt="hjhgfhg" />
-      <p>Sagar Patil</p>
-      <App />
-    </>
+    <App />
   </React.StrictMode>,
 );

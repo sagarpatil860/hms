@@ -1,8 +1,14 @@
 /* eslint-disable no-inline-styles/no-inline-styles */
-/* eslint-disable jsdoc/require-jsdoc */
-
 import React from "react";
 
+/**
+ * Not Found Page.
+ *
+ * Renders an interactive page when no matching route is present.
+ *
+ *
+ * @returns {JSX.Element} This renders not found page for the app.
+ */
 function NotFound() {
   return (
     <div
@@ -19,7 +25,12 @@ function NotFound() {
       }}
     >
       <h1 style={{ fontSize: "72px", margin: 0 }}>404</h1>
-      <p style={{ fontSize: "24px", margin: "10px 0" }}>Page Not Found</p>
+      <p
+        style={{ fontSize: "24px", margin: "10px 0" }}
+        data-testid="not-found-msg"
+      >
+        Page Not Found
+      </p>
       <a
         href="/dashboard"
         style={{

@@ -2,7 +2,7 @@
 import React from "react";
 
 function Dashboard() {
-  return <div>Dashboard.page</div>;
+  return <div data-testid="dashboard-test-id">Dashboard.page</div>;
 }
 
 export default Dashboard;
